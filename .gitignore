@@ -1,0 +1,6 @@
+/terraform9cli_accessKeys.csv
+/terraform.tfstate.backup
+/terraform.tfstate
+/resources.csv
+/.terraform.lock.hcl
+/.terraform/
