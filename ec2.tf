@@ -15,10 +15,10 @@ data "aws_ami" "amazon_linux_2_ssm" {
 }
 resource "aws_instance" "linux" {
   ami=data.aws_ami.amazon_linux_2_ssm.id
-  instance_type="t2.micro"
+  instance_type=var.instance_type
   iam_instance_profile=aws_iam_instance_profile.ssm-allow.name
   subnet_id=aws_subnet.private.id
      tags={
-    Name="first-aws-linux"
+    Name=var.tag_name
   }
 }
